@@ -29,7 +29,7 @@ key = ' ' # Enter Your Virus Total API key
  Title :- Multiple Hash Scanning  
 +++++++++++++++++++++++++++++++++
  
- # OUTPUT (VT_Scan.txt)
+ # Output (VT_Scan.txt)
  
 Malware Hit Count 44/56
 
