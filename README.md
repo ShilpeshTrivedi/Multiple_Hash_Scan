@@ -22,3 +22,21 @@ This script scan 4 hash at the same time and take hold for 1 minute then it'll s
 # Usage
 
 python HashScan.py
+
+# Example
+
+You have to enter your VirusTotal API Key at on 10th nuber row.
+
+key = ' ' # Enter Your Virus Total API key
+
++++++++++++++++++++++++++++++++++                                                                                                       
+ Copyright :- Shilpesh Trivedi             
+ Title :- Multiple Hash Scanning  
++++++++++++++++++++++++++++++++++
+ 
+ [*] Malware Hit Count 44/56
+
+ [*] 1a8add5b9ec54912a6ba4b06c39b8d2100034b48dddb5b717481935c292ad2ef  IS MALICIOUS
+
+ [*] MD5 Value is = 0002d20a7423518b7f371302014076c9
+ 
