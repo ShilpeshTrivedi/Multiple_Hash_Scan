@@ -4,9 +4,7 @@ This is a portable script written in Python (Python 2.7) used for "Multiple Hash
 
 VT_Scan.txt: will stored the Hit counts for the hash value and how many AV is detected by malicious with the respectively name of malware.
 
-EG: -
-
-Sophos = detected: True, version:4.98.0, result:Mal/Generic-S, update:20160621                                                            
+EG: - Sophos = detected: True, version:4.98.0, result:Mal/Generic-S, update:20160621                                                            
 
 MD5.txt: will stored only the MD5 hash value of given hahses.
 
