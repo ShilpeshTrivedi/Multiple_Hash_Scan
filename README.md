@@ -7,6 +7,7 @@ VT_Scan.txt: will stored the Hit counts for the hash value and how many AV is de
 EG: -
 
 Sophos = detected: True, version:4.98.0, result:Mal/Generic-S, update:20160621                                                            
+
 MD5.txt: will stored only the MD5 hash value of given hahses.
 
 This script scan 4 hash at the same time and take hold for 1 minute then it'll scan next four hashes and continue till the last hash.
