@@ -34,6 +34,8 @@ key = ' ' # Enter Your Virus Total API key
  Title :- Multiple Hash Scanning  
 +++++++++++++++++++++++++++++++++
  
+ # OUTPUT
+ 
  [*] Malware Hit Count 44/56
 
  [*] 1a8add5b9ec54912a6ba4b06c39b8d2100034b48dddb5b717481935c292ad2ef  IS MALICIOUS
