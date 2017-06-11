@@ -10,6 +10,10 @@ MD5.txt: will stored only the MD5 hash value of given hahses.
 
 This script scan 4 hash at the same time and take hold for 1 minute then it'll scan next four hashes and continue till the last hash.
 
+# Pre-Requesites
+
+Internet Connection
+
 # Usage
 
 python HashScan.py
