@@ -51,6 +51,9 @@ try:
                                                         file = open('VT_Scan.txt','a')
                                                         file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
                                                         file.write('\n\n')
+                                                        file = open('output.txt','a')
+                                                        file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
+                                                        file.write('\n\n')
                                                         file.write('MD5 Value is = ' + md5)
                                                         file.write('\n\n')
                                                         file.write(str(scans).replace('}, u','\n').replace(' u','').replace('{','').replace(': u',' = ').replace("'","").replace('}}','').replace(',',', '))
@@ -102,6 +105,9 @@ try:
                                                         print '\n [*] Malware Hit Count ' + str(positives) +'/'+str(total)                                         
                                                         print '\n [*] ' + fyl + ' IS MALICIOUS'
                                                         print '\n [*] MD5 Value is = ' + md5
+                                                        file = open('VT_Scan.txt','a')
+                                                        file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
+                                                        file.write('\n\n')
                                                         file = open('output.txt','a')
                                                         file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
                                                         file.write('\n\n')
