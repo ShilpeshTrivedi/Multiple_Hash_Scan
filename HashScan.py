@@ -11,7 +11,7 @@ key = '' # Enter Your Virus Total API key
 
 print '\n'
 print ' +++++++++++++++++++++++++++++++++++'
-print ' + Copyright :- Shilpesh Trivedi   +'
+print ' + Auther:- Shilpesh Trivedi       +'
 print ' + Title :- Multiple Hash Scanning +'
 print ' +++++++++++++++++++++++++++++++++++'
 print '\n'
