@@ -14,6 +14,7 @@ This script scan 4 hash at the same time and take hold for 1 minute then it'll s
 
 - Internet Connection
 - requests module (pip install requests)
+- Python 2.7
 
 # Usage
 
