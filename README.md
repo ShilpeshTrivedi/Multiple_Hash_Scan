@@ -29,7 +29,9 @@ key = '' # Enter Your Virus Total API key
 +++++++++++++++++++++++++++++++++++
 + Author:- Shilpesh Trivedi       +
 + Title :- Multiple Hash Scanning +
+
 +++++++++++++++++++++++++++++++++++
+ 
  
  # Output (Output.csv)
  
