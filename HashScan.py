@@ -4,21 +4,26 @@ import time
 try :
         fp = open ('input.txt') # Here entered input file
 except IOError:
-        print "\n\nOops!!! 'input.txt' IS NOT FOUND IN SAME FOLDER"
+        print (" \n\nOops!!! 'input.txt' IS NOT FOUND IN SAME FOLDER ")
         exit()
 
 key = '' # Enter Your Virus Total API key
 
-print '\n'
-print ' +++++++++++++++++++++++++++++++++++'
-print ' + Auther:- Shilpesh Trivedi       +'
-print ' + Title :- Multiple Hash Scanning +'
-print ' +++++++++++++++++++++++++++++++++++'
-print '\n'
+print ('\n')
+print (' +++++++++++++++++++++++++++++++++++')
+print (' + Author:- Shilpesh Trivedi       +')
+print (' + Title :- Multiple Hash Scanning +')
+print (' +++++++++++++++++++++++++++++++++++')
+print ('\n')
 
 
 try:
+        file = open('OutPut.csv','a')
+        file.write('Hash,Malicious (YES/NO),Hit Ratio,MD5')
+        file.close()
+        
         for i, fyl in enumerate(fp):
+                hashs=str(fyl.strip())
                 if i%4==0:
 # Virus Total Analysis
                         if len(key) == 64: # Cheking For API Key
@@ -30,14 +35,22 @@ try:
                                         response = int(json_response.get('response_code'))
 
                                         if response == 0:
-                                                print '\n'
+                                                print ('\n')
                                                 print (' [-] '  + fyl + ' is not in Virus Total')
+                                                file = open('OutPut.csv','a')
+                                                file.write('\n')
+                                                file.write(hashs+',N.A,N.A,Hash is not in Virus Total')
+                                                file.close()
                                 
                                         elif response == 1:
                                                 positives = int(json_response.get('positives'))
 
                                                 if positives == 0:
-                                                        print '\n'
+                                                        print ('\n')
+                                                        file = open('OutPut.csv','a')
+                                                        file.write('\n')
+                                                        file.write(hashs+',NO,N.A,N.A')
+                                                        file.close()
                                                         print (' [-] ' + fyl + ' is not malicious')
                                                 else:
                                                         md5 = json_response.get('md5')
@@ -45,34 +58,20 @@ try:
                                                         total= int(json_response.get('total'))
                                                         scans=str(json_response.get('scans'))
                         
-                                                        print '\n [*] Malware Hit Count ' + str(positives) +'/'+str(total)
-                                                        print '\n [*] ' + fyl + ' IS MALICIOUS'
-                                                        print '\n [*] MD5 Value is = ' + md5
-                                                        file = open('VT_Scan.txt','a')
-                                                        file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
-                                                        file.write('\n\n')
-                                                        file = open('output.txt','a')
-                                                        file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
-                                                        file.write('\n\n')
-                                                        file.write('MD5 Value is = ' + md5)
-                                                        file.write('\n\n')
-                                                        file.write(str(scans).replace('}, u','\n').replace(' u','').replace('{','').replace(': u',' = ').replace("'","").replace('}}','').replace(',',', '))
+                                                        print ('\n [*] Malware Hit Count ' + str(positives) +'/'+str(total))
+                                                        print ('\n [*] ' + fyl + ' IS MALICIOUS')
+                                                        print ('\n [*] MD5 Value is = ' + md5)
+                                                        file = open('OutPut.csv','a')
                                                         file.write('\n')
-                                                        file.write('\n*************************************************************************************************************************************')    
-                                                        file.write('\n')
-                                                        file.close()
-
-                                                        file= open('MD5.txt','a')
-                                                        file.write(md5)
-                                                        file.write('\n')
+                                                        file.write(hashs+',YES,'+(str(positives)+' Out Of '+str(total))+','+md5)
                                                         file.close()
                                         else:
-                                                print fyl + ' [-] could not be searched. Please try again later.'
+                                                print (fyl + ' [-] could not be searched. Please try again later.')
             
-                                except Exception, e:
-                                        print '\n [-] Oops!!, Somthing Wrong Check Your Internet Connection Or Entered Hash'
+                                except:
+                                        print ('\n [-] Oops!!, Somthing Wrong Check Your Internet Connection Or Entered Hash')
                         else:
-                                print " [-] There is something Wrong With Your API Key."
+                                print (" [-] There is something Wrong With Your API Key.")
                                 exit()
                         time.sleep(60) # Here Used Time Sleep mathod here i used 40 sec mex
             
@@ -87,49 +86,45 @@ try:
                                         response = int(json_response.get('response_code'))
 
                                         if response == 0:
-                                                print '\n'
+                                                print ('\n')
                                                 print (' [-] '  + fyl + ' is not in Virus Total')
+                                                file = open('OutPut.csv','a')
+                                                file.write('\n')
+                                                file.write(hashs+',N.A,N.A,Hash is not in Virus Total')
+                                                file.close()
                                 
                                         elif response == 1:
                                                 positives = int(json_response.get('positives'))
 
                                                 if positives == 0:
-                                                        print '\n'
+                                                        print ('\n')
+                                                        file = open('OutPut.csv','a')
+                                                        file.write('\n')
+                                                        file.write(hashs+',NO,N.A,N.A')
+                                                        file.close()
                                                         print (' [-] ' + fyl + ' is not malicious')
+                                                        
                                                 else:
                                                         md5 = json_response.get('md5')
                                                         positives= int(json_response.get('positives'))
                                                         total= int(json_response.get('total'))
                                                         scans=str(json_response.get('scans'))
                         
-                                                        print '\n [*] Malware Hit Count ' + str(positives) +'/'+str(total)                                         
-                                                        print '\n [*] ' + fyl + ' IS MALICIOUS'
-                                                        print '\n [*] MD5 Value is = ' + md5
-                                                        file = open('VT_Scan.txt','a')
-                                                        file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
-                                                        file.write('\n\n')
-                                                        file = open('output.txt','a')
-                                                        file.write('Malware Hit Count ' + str(positives) +'/'+str(total))
-                                                        file.write('\n\n')
-                                                        file.write('MD5 Value is = ' + md5)
-                                                        file.write('\n\n')
-                                                        file.write(str(scans).replace('}, u','\n').replace(' u','').replace('{','').replace(': u',' = ').replace("'","").replace('}}',''))
+                                                        print ('\n [*] Malware Hit Count ' + str(positives) +'/'+str(total))
+                                                        print ('\n [*] ' + fyl + ' IS MALICIOUS')
+                                                        print ('\n [*] MD5 Value is = ' + md5)
+                                                        file = open('OutPut.csv','a')
                                                         file.write('\n')
-                                                        file.write('\n*************************************************************************************************************************************')    
-                                                        file.write('\n')
-                                                        file.close()
-
-                                                        file= open('MD5.txt','a')
-                                                        file.write(md5)
-                                                        file.write('\n')
+                                                        file.write(hashs+',YES,'+str(positives)+' Out Of '+str(total)+','+md5)
                                                         file.close()
                                         else:
-                                                print fyl + ' [-] could not be searched. Please try again later.'
+                                                print (fyl + ' [-] could not be searched. Please try again later.')
             
-                                except Exception, e:
-                                        print '\n [-] Oops!!, Somthing Wrong Check Your Internet Connection Or Entered Hash'
+                                except:
+                                        print ('\n [-] Oops!!, Somthing Wrong Check Your Internet Connection Or Entered Hash')
                         else:
-                                print " [-] There is something Wrong With Your API Key."
+                                print (" [-] There is something Wrong With Your API Key.")
                                 exit()
+								
 except KeyboardInterrupt:
-        print "\n\n Oops!!! PEROGRAM HALTED B'COZ YOU PRESS CTRL+C. "
+        print ("\n\n Oops!!! PEROGRAM HALTED B'COZ YOU PRESS CTRL+C. ")
