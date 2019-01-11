@@ -31,7 +31,9 @@ key = '' # Enter Your Virus Total API key
 + Title :- Multiple Hash Scanning +
 +++++++++++++++++++++++++++++++++++
  
- # Output (VT_Scan.txt)
+ # Output (Output.csv)
+ 
+ ![alt text](https://github.com/ShilpeshTrivedi/Multiple_Hash_Scan/blob/master/HashScan.png)
         
 
 *************************************************************************************************************************************
