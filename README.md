@@ -24,25 +24,14 @@ python HashScan.py
 
 You have to enter your VirusTotal API Key at on 10th nuber row.
 
-key = ' ' # Enter Your Virus Total API key
+key = '' # Enter Your Virus Total API key
 
-+++++++++++++++++++++++++++++++++                                                                                                       
- Copyright :- Shilpesh Trivedi             
- Title :- Multiple Hash Scanning  
-+++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
++ Author:- Shilpesh Trivedi       +
++ Title :- Multiple Hash Scanning +
++++++++++++++++++++++++++++++++++++
  
  # Output (VT_Scan.txt)
- 
-Malware Hit Count 44/56
-
-MD5 Value is = 0002d20a7423518b7f371302014076c9
-
-Sophos = detected: True, version:4.98.0, result:Mal/Generic-S, update:20160621                                                              
-McAfee = detected: True, version:6.0.6.653, result:Artemis!0002D20A7423, update:20160621                                                    
-Baidu = detected: False, version:1.0.0.2, result: None, update:20160621                                                                                        
-. 
-
-.                                                                                                                                                                                                                       
-Symantec = detected: True, version:20151.1.1.4, result:Trojan.Malcol, update:20160621         
+        
 
 *************************************************************************************************************************************
